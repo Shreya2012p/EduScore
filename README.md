@@ -1,5 +1,4 @@
 
-```markdown
 # CGPA Calculator
 
 Welcome to the CGPA Calculator repository! This tool helps you calculate your Cumulative Grade Point Average easily.
