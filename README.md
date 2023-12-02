@@ -28,7 +28,7 @@ Ensure you have the following installed:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/KIRAN-KUMAR-K3/CGPA.git
+   git clone https://github.com/Shreya2012p/CGPA.git/
    ```
 
 2. **Open the Calculator:**
