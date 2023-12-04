@@ -2,53 +2,61 @@
 #include<vector>
 #include<iomanip>
 using namespace std;
-struct Course{
+
+struct Course {
     string name;
     int creditHours;
     double grade;
 };
-double CGPA_CALCULATOR(const vector<Course>&courses){
-double totalgradepoints=0.0;
-int totalcreditHours=0;
-for(const Course&course:courses){
-    totalgradepoints+=course.grade*course.creditHours;
-    totalcreditHours+=course.creditHours;
-}
-if(totalcreditHours>0){
-    return totalgradepoints/totalcreditHours;
-}
-else{
-    return 0.0;
-}
-}
-int main()
-{
-    vector<Course>courses;
-    cout<<"CGPA Calculator"<<endl;
-    int numCourses;
-    cout<<"ENTER THE NUMBER OF COURSES"<<endl;
-    cin>>numCourses;
 
-    for(int i=0;i<numCourses;i++){
-        Course newcourse;
-        cout<<"\nENTER THE DETAILS OF COURSE";
-        cout<<"\nCOURSE NAME";
+double calculateCGPA(const vector<Course>& courses) {
+    double totalGradePoints = 0.0;
+    int totalCreditHours = 0;
+
+    for (const Course& course : courses) {
+        totalGradePoints += course.grade * course.creditHours;
+        totalCreditHours += course.creditHours;
+    }
+
+    return (totalCreditHours > 0) ? (totalGradePoints / totalCreditHours) : 0.0;
+}
+
+int main() {
+    cout << "CGPA Calculator" << endl;
+
+    int numCourses;
+    cout << "Enter the number of courses: ";
+    cin >> numCourses;
+
+    vector<Course> courses;
+
+    for (int i = 0; i < numCourses; i++) {
+        Course newCourse;
+
+        cout << "\nEnter the details of course " << i + 1 << ":";
+        cout << "\nCourse Name: ";
         cin.ignore();
-        getline(cin,newcourse.name);
-        cout<<"CREDIT HOURS";
-        cin>>newcourse.creditHours;
-        cout<<"Grade(1-9):";
-        cin>>newcourse.grade;
-        if(newcourse.grade<1||newcourse.grade>9){
-            cout<<"INVALID GRADE.PLEASE ENTER GRADE BETWEEN 1-9"<<endl;
+        getline(cin, newCourse.name);
+
+        cout << "Credit Hours: ";
+        cin >> newCourse.creditHours;
+
+        cout << "Grade (1-9): ";
+        cin >> newCourse.grade;
+
+        if (newCourse.grade < 1 || newCourse.grade > 9) {
+            cout << "Invalid grade. Please enter a grade between 1-9." << endl;
             i--;
             continue;
         }
-        courses.push_back(newcourse);
-    }
-    double CGPA=CGPA_CALCULATOR(courses);
-    cout<<fixed<<setprecision(2);
-    cout<<"\nYOUR CGPA IS:"<<CGPA<<endl;
-    return 0;
 
+        courses.push_back(newCourse);
     }
+
+    double CGPA = calculateCGPA(courses);
+
+    cout << fixed << setprecision(2);
+    cout << "\nYour CGPA is: " << CGPA << endl;
+
+    return 0;
+}
