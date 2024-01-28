@@ -1,5 +1,7 @@
-# CGPA CALCULATOR 
-# CGPA Calculator
+
+# EduScore: Academic Excellence Companion
+ EduScore is more than just a CGPA calculator; it's your companion on the journey to academic excellence. With a user-friendly interface and insightful features, EduScore empowers students to understand and improve their academic performance.
+
 
 Calculate your Cumulative Grade Point Average effortlessly with this CGPA Calculator built with C++.
 
