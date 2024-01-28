@@ -58,10 +58,10 @@ Ensure you have a C++ compiler installed on your system.
 ## Contributing
 We welcome contributions from the community! If you'd like to contribute to the project, please follow these steps:
 
-Fork the repository
-Create a new branch (git checkout -b feature/new-feature)
-Commit your changes (git commit -m 'Add new feature')
-Push to the branch (git push origin feature/new-feature)
-Open a pull request
+👉Fork the repository</br>
+👉Create a new branch (git checkout -b feature/new-feature)</br>
+👉Commit your changes (git commit -m 'Add new feature')</br>
+👉Push to the branch (git push origin feature/new-feature)</br>
+👉Open a pull request</br>
 
-THANK❤️YOU
+THANK❤️YOU-K.G.SHREYA❤️
